@@ -4,36 +4,69 @@
 @import "global";
 @import "libs";
 
-.arrow-go-up {
-   position: relative;
-   &__svg {
-      width: 32px;
-      height: 14px;
-      transform: rotate(-90deg);
-      transition: all 0.3s;
-      stroke: $hover;
+.header {
+   &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
    }
 }
-#scrollToTopBtn {
-   position: fixed;
-   display: none;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-   bottom: 30px;
-   right: 30px;
-   width: 50px;
-   height: 50px;
-   border-radius: 7px;
-   background-color: $default;
-   transition: all 0.3s;
-   cursor: pointer;
-   &:hover {
-      background-color: $hover;
-      .arrow-go-up__svg {
-         stroke: $accent;
-         fill: transparent;
+.logo {
+   &__svg {
+      width: 165px;
+      height: 40px;
+   }
+}
+.menu {
+   &__list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0 60px;
+   }
+   &__link {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      text-transform: uppercase;
+      color: $default;
+      transition: all 0.2s;
+      &:hover {
+         color: $accent;
       }
    }
 }
+
+// .arrow-go-up {
+//    position: relative;
+//    &__svg {
+//       width: 32px;
+//       height: 14px;
+//       transform: rotate(-90deg);
+//       transition: all 0.3s;
+//       stroke: $hover;
+//    }
+// }
+// #scrollToTopBtn {
+//    position: fixed;
+//    display: none;
+//    justify-content: center;
+//    align-items: center;
+//    flex-direction: column;
+//    bottom: 30px;
+//    right: 30px;
+//    width: 50px;
+//    height: 50px;
+//    border-radius: 7px;
+//    background-color: $default;
+//    transition: all 0.3s;
+//    cursor: pointer;
+//    &:hover {
+//       background-color: $hover;
+//       .arrow-go-up__svg {
+//          stroke: $accent;
+//          fill: transparent;
+//       }
+//    }
+// }
 @import "media";

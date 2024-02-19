@@ -1,30 +1,77 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" >
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+      <title>Portfolio</title>
+      <link rel="stylesheet" href="css/style.min.css" >
+   </head>
+   <body>
+      <div class="wrapper">
+         <header class="header">
+            <div class="container">
+               <div class="header__wrapper">
+                  <a class="logo" href="#">
+                     <svg class="logo__svg">
+                        <use
+                           xlink:href="images/sprite.svg#logo"
+                           width="165"
+                           height="40"
+                        ></use>
+                     </svg>
+                  </a>
+                  <nav class="menu">
+                     <ul class="menu__list">
+                        <li class="menu__item">
+                           <a class="menu__link" href="#">Home</a>
+                        </li>
+                        <li class="menu__item">
+                           <a class="menu__link" href="#">Portfolio</a>
+                        </li>
+                        <li class="menu__item">
+                           <a class="menu__link" href="#">Skills</a>
+                        </li>
+                        <li class="menu__item">
+                           <a class="menu__link" href="#">About me</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </header>
+      </div>
+   </body>
+</html>
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-   <header>
 
-   </header>
+   <main class="main">
+      
+   </main>
+<footer class="footer">&#169;
 
 
 
 
 
-
-
-
-
-
-
-<footer>footer</footer>
+      <div class="arrow-go-up">
+      <button
+         class="arrow-go-up__square"
+         id="scrollToTopBtn"
+         onclick="scrollToTop()"
+      >
+      <svg class="arrow-go-up__svg">
+         <use
+         xlink:href="images/sprite.svg#arrow-right"
+         width="32"
+         height="14"
+         ></use>
+      </svg>
+      </button>
+    </div>
+</footer>
 <script src="js/main.min.js"></script>
+</div>
 </body>
 
 </html>

@@ -1,5 +1,7 @@
 body {
    height: 100vh;
+   @extend %roboto-400;
+   // background-color: $background;
 }
 a {
    text-decoration: none;
@@ -13,7 +15,7 @@ button {
 }
 .wrapper {
    min-height: 100%;
-   // overflow: clip;
+   overflow: clip;
    display: flex;
    flex-direction: column;
 }
