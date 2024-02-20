@@ -3,8 +3,14 @@
 @import "reset";
 @import "global";
 @import "libs";
-
+.aaa {
+   height: 300px;
+}
 .header {
+   // background-image: url(../images/bg-1.avif);
+   // background-position: center;
+   // background-repeat: no-repeat;
+   // background-size: contain;
    &__wrapper {
       display: flex;
       justify-content: space-between;
@@ -16,6 +22,11 @@
    &__svg {
       width: 165px;
       height: 40px;
+      fill: $accent;
+      transition: all 0.3s;
+      &:hover {
+         fill: $hover;
+      }
    }
 }
 .menu {
@@ -29,44 +40,156 @@
       font-size: 1.125rem;
       line-height: 1.75rem;
       text-transform: uppercase;
-      color: $default;
+      color: $accent;
       transition: all 0.2s;
       &:hover {
-         color: $accent;
+         color: $hover;
       }
    }
 }
+.portfolio {
+   &__content {
+      width: 100vw;
+      background-image: url(../images/bg-3.avif);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+   }
+   &__wrapper {
+      position: relative;
+      padding: 100px 50px;
+   }
+   &__background-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -100;
+   }
+   &__title {
+      @extend %roboto-700;
+      font-size: 3rem;
+      line-height: 3.25rem;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 65px;
+   }
+   &__chapter {
+      margin-bottom: 50px;
+   }
+   &__chapter-title {
+      background-color: $background;
+      font-size: 1.75rem;
+      margin-bottom: 1.875rem;
+      text-align: center;
+      padding: 20px;
+      border: 1px solid $accent;
+      cursor: pointer;
+      position: relative;
+      &::before,
+      &::after {
+         content: "";
+         position: absolute;
+         transition: all 0.2s;
+         width: 20px;
+         height: 2px;
+         background-color: $accent;
+      }
+      &::before {
+         right: 30px;
+         top: 38px;
+         transform: rotate(45deg);
+      }
+      &::after {
+         right: 18px;
+         top: 38px;
+         transform: rotate(-45deg);
+      }
+   }
+   &__chapter-title.portfolio__chapter-title--active {
+      &::before {
+         right: 30px;
+         top: 38px;
+         transform: rotate(-45deg);
+      }
+      &::after {
+         right: 18px;
+         top: 38px;
+         transform: rotate(45deg);
+      }
+      .portfolio__inner {
+         display: block;
+      }
+   }
+   &__inner {
+      display: none;
+   }
+   &__text {
+      font-size: 1.125rem;
+      line-height: 2rem;
+      text-align: center;
+      margin: 0 auto;
+      margin-bottom: 65px;
+      max-width: 800px;
+   }
+   &__items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+   }
+   &__item {
+   }
+   &__img-link {
+      display: block;
+      max-width: 460px;
+      max-height: 275px;
+      overflow: hidden;
+   }
+   &__link-img {
+   }
+   &__name {
+   }
+   &__name-link {
+   }
+   &__description {
+   }
+   &__read-link {
+   }
+}
 
-// .arrow-go-up {
-//    position: relative;
-//    &__svg {
-//       width: 32px;
-//       height: 14px;
-//       transform: rotate(-90deg);
-//       transition: all 0.3s;
-//       stroke: $hover;
-//    }
-// }
-// #scrollToTopBtn {
-//    position: fixed;
-//    display: none;
-//    justify-content: center;
-//    align-items: center;
-//    flex-direction: column;
-//    bottom: 30px;
-//    right: 30px;
-//    width: 50px;
-//    height: 50px;
-//    border-radius: 7px;
-//    background-color: $default;
-//    transition: all 0.3s;
-//    cursor: pointer;
-//    &:hover {
-//       background-color: $hover;
-//       .arrow-go-up__svg {
-//          stroke: $accent;
-//          fill: transparent;
-//       }
-//    }
-// }
+.arrow-go-up {
+   position: relative;
+   &__svg {
+      width: 32px;
+      height: 14px;
+      transform: rotate(-90deg);
+      transition: all 0.3s;
+      stroke: $accent;
+      fill: $background;
+   }
+}
+#scrollToTopBtn {
+   position: fixed;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   bottom: 30px;
+   right: 30px;
+   width: 50px;
+   height: 50px;
+   border-radius: 7px;
+   background-color: $background;
+   transition: all 0.3s;
+   cursor: pointer;
+   &:hover {
+      background-color: $accent;
+      .arrow-go-up__svg {
+         stroke: $background;
+         fill: transparent;
+      }
+   }
+}
 @import "media";

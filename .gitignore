@@ -4,6 +4,7 @@
 .vscode
 *.sublime*
 npm-debug.*
+.prettierignore
 
 dist/
 node_modules
