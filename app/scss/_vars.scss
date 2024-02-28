@@ -1,10 +1,8 @@
 $default: #a3a3a3;
 $accent: #ffc800;
-// $hover: #0554ff;
-// $hover: #ff6e00;
 $hover: #ff600a;
-$background: #000;
-
+$background: #161616;
+$link-height: 275px;
 // %btn {
 //    @extend %cardo-400;
 //    background-color: $accent;
@@ -22,7 +20,6 @@ $background: #000;
 //       background-color: $hover;
 //    }
 // }
-
 %roboto-400 {
    font-family: "Roboto-Regular", sans-serif;
    font-weight: 400;
