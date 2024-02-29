@@ -1,25 +1,9 @@
-$default: #a3a3a3;
 $accent: #ffc800;
 $hover: #ff600a;
 $background: #161616;
+// $background: #000;
 $link-height: 275px;
-// %btn {
-//    @extend %cardo-400;
-//    background-color: $accent;
-//    font-size: 19px;
-//    line-height: 28px;
-//    letter-spacing: 0.57px;
-//    text-transform: capitalize;
-//    color: $default;
-//    border: none;
-//    cursor: pointer;
-//    transition: all .2s;
 
-//    &:hover {
-//       color: $accent;
-//       background-color: $hover;
-//    }
-// }
 %roboto-400 {
    font-family: "Roboto-Regular", sans-serif;
    font-weight: 400;
@@ -28,4 +12,25 @@ $link-height: 275px;
 %roboto-700 {
    font-family: "Roboto-Bold", sans-serif;
    font-weight: 700;
+}
+%hover-line {
+   &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background-color: $hover;
+      transition: all 0.2s;
+      transform-origin: left;
+      transform: scaleX(0);
+   }
+   &:hover {
+      color: $hover;
+      &::before {
+         transform: scaleX(1);
+         transform-origin: left;
+      }
+   }
 }
