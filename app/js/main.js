@@ -46,6 +46,14 @@ $("#menu").on("click", "a", function (e) {
    }
 });
 
+// Mobile menu
+
+$(".menu__btn, .menu a").on("click", function () {
+   $(".menu__btn").toggleClass("menu__btn--active");
+   $(".menu__list").toggleClass("menu__list--active");
+   $("body").toggleClass("lock");
+});
+
 // // wow animation
 // wow = new WOW({
 //    boxClass: "wow",
