@@ -38,7 +38,7 @@ $("#menu").on("click", "a", function (e) {
       target = $(id),
       header = $("#header"), // Замініть на відповідний селектор
       headerHeight = header.outerHeight(),
-      offset = 50; // Замініть це на бажану величину в пікселях
+      offset = 0; // Замініть це на бажану величину в пікселях
 
    if (target.length) {
       var top = target.offset().top - headerHeight - offset;
