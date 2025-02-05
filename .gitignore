@@ -1,17 +1,3 @@
-# .DS_Store
-# .idea/
-# .idea/*
-# .vscode
-# *.sublime*
-# npm-debug.*
-# .prettierignore
-
-# dist/
-# node_modules
-# package-log.json
-# app/css/*
-
-
 .DS_Store
 .idea/
 .idea/*
@@ -27,3 +13,17 @@ package-lock.json
 app/css/*
 dist/*
 !dist/
+
+
+# .DS_Store
+# .idea/
+# .idea/*
+# .vscode
+# *.sublime*
+# npm-debug.*
+# .prettierignore
+
+# dist/
+# node_modules
+# package-log.json
+# app/css/*
