@@ -6,7 +6,7 @@
 npm-debug.*
 .prettierignore
 
-dist/
+# dist/
 node_modules
 package-log.json
 app/css/*
