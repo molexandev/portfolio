@@ -1,0 +1,36 @@
+$accent: #ffc800;
+$hover: #ff600a;
+$background: #161616;
+// $background: #000;
+$link-height: 275px;
+
+%roboto-400 {
+   font-family: "Roboto-Regular", sans-serif;
+   font-weight: 400;
+}
+
+%roboto-700 {
+   font-family: "Roboto-Bold", sans-serif;
+   font-weight: 700;
+}
+%hover-line {
+   &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 100%;
+      height: 2px;
+      background-color: $hover;
+      transition: all 0.2s;
+      transform-origin: left;
+      transform: scaleX(0);
+   }
+   &:hover {
+      color: $hover;
+      &::before {
+         transform: scaleX(1);
+         transform-origin: left;
+      }
+   }
+}
