@@ -1,6 +1,6 @@
 $(function () {
-   $(".portfolio__chapter-title").on("click", function () {
-      $(this).toggleClass("portfolio__chapter-title--active");
+   $('.portfolio__chapter-title').on('click', function () {
+      $(this).toggleClass('portfolio__chapter-title--active');
       $(this).next().slideToggle();
    });
 });
@@ -10,48 +10,48 @@ function scrollToTop() {
    // Прокрутити сторінку до верху з плавністю
    window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
    });
 }
 
 // Отримати елемент кнопки
-var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+var scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
 // Додати обробник подій для події прокрутки
-window.addEventListener("scroll", function () {
+window.addEventListener('scroll', function () {
    // Визначити, чи користувач почав скролити сторінку
    if (
       document.body.scrollTop > 93 ||
       document.documentElement.scrollTop > 93
    ) {
-      scrollToTopBtn.style.display = "flex";
+      scrollToTopBtn.style.display = 'flex';
    } else {
-      scrollToTopBtn.style.display = "none";
+      scrollToTopBtn.style.display = 'none';
    }
 });
 
 // Плавний скрол по розділах
 
-$("#menu").on("click", "a", function (e) {
+$('#menu').on('click', 'a', function (e) {
    e.preventDefault();
-   var id = $(this).attr("href"),
+   var id = $(this).attr('href'),
       target = $(id),
-      header = $("#header"), // Замініть на відповідний селектор
+      header = $('#header'), // Замініть на відповідний селектор
       headerHeight = header.outerHeight(),
       offset = 0; // Замініть це на бажану величину в пікселях
 
    if (target.length) {
       var top = target.offset().top - headerHeight - offset;
-      $("body, html").animate({ scrollTop: top }, 1500);
+      $('body, html').animate({ scrollTop: top }, 1500);
    }
 });
 
 // Mobile menu
 
-$(".menu__btn, .menu a").on("click", function () {
-   $(".menu__btn").toggleClass("menu__btn--active");
-   $(".menu__list").toggleClass("menu__list--active");
-   $("body").toggleClass("lock");
+$('.menu__btn, .menu a').on('click', function () {
+   $('.menu__btn').toggleClass('menu__btn--active');
+   $('.menu__list').toggleClass('menu__list--active');
+   $('body').toggleClass('lock');
 });
 
 // // wow animation
@@ -63,4 +63,5 @@ $(".menu__btn, .menu a").on("click", function () {
 //    live: true,
 // });
 // wow.init();
-//
+// //
+// const arr [7, 5, 7
